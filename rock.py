@@ -35,7 +35,18 @@ if computerInput == 1 and userInput == 3:
 if computerInput == 1 and userInput == 2:
     print (f"{userName} Wins!")
     
-#computer = paper and user has scissors = computer wins 
+#computer = paper and user has scissors = user wins 
+if computerInput == 2 and userInput ==3:
+    print (f"{userName} Wins!")
+
 #computer = paper and user has rock = computer wins 
+if computerInput == 2 and userInput ==1:
+    print (f"Computer Wins!")
+
 #computer = scissors and user has paper, computer wins
+if computerInput == 3 and userInput ==2:
+    print (f"Computer Wins!")
+
 #computer = scissors and user has rock, user wins
+if computerInput == 3 and userInput ==1:
+    print (f"{userName} Wins!")
