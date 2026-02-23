@@ -4,11 +4,13 @@ import random
 
 
 #create some varieables
-userName = input("Enter your name: ")
+userName = ""
+while userName == "":
+    userName = input("Enter your name: ")
 
-userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: "))
+userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
 if userInput == 1: 
-    userText = "Rock"
+    userText = "Rock"    
 elif userInput == 2:
     userText = "Paper"
 else:
@@ -34,7 +36,7 @@ if computerInput == 1 and userInput == 3:
 #computer = rock and user = paper, user wins
 if computerInput == 1 and userInput == 2:
     print (f"{userName} Wins!")
-    
+
 #computer = paper and user has scissors = user wins 
 if computerInput == 2 and userInput ==3:
     print (f"{userName} Wins!")
