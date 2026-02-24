@@ -9,6 +9,9 @@ while userName == "":
     userName = input("Enter your name: ")
 
 userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+while userInput != 1 and userInput != 2 and userInput != 3:
+        userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+
 if userInput == 1: 
     userText = "Rock"    
 elif userInput == 2:
