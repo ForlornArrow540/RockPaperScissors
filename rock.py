@@ -1,6 +1,11 @@
 import random
 
 
+def Get_user_input():
+    userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+    while userInput != 1 and userInput != 2 and userInput != 3:
+        userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+    return userInput
 
 
 #create some varieables
@@ -8,11 +13,11 @@ userName = ""
 while userName == "":
     userName = input("Enter your name: ")
 
-userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
-while userInput != 1 and userInput != 2 and userInput != 3:
-        userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+#userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+#while userInput != 1 and userInput != 2 and userInput != 3:
+        #userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
 
-
+userInput = Get_user_input()
 gameCount = 1
 gameCountMax = 5
 computeWins = 0
@@ -65,7 +70,7 @@ while gameCount < gameCountMax:
 
     gameCount = gameCount + 1
 
-    userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
+    userInput = Get_user_input()
 
 
 
