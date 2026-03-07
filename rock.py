@@ -13,9 +13,6 @@ userName = ""
 while userName == "":
     userName = input("Enter your name: ")
 
-#userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
-#while userInput != 1 and userInput != 2 and userInput != 3:
-        #userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
 
 userInput = Get_user_input()
 gameCount = 1
@@ -47,6 +44,7 @@ while gameCount < gameCountMax:
 #computer = rock and user = scissors, computer wins
     if computerInput == 1 and userInput == 3:
      print (f"Computer Wins!")
+     computeWins =+ 1
 
 #computer = rock and user = paper, user wins
     if computerInput == 1 and userInput == 2:
@@ -68,7 +66,7 @@ while gameCount < gameCountMax:
     if computerInput == 3 and userInput ==1:
      print (f"{userName} Wins!")
 
-    gameCount = gameCount + 1
+    gameCount += 1
 
     userInput = Get_user_input()
 
