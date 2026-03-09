@@ -1,43 +1,21 @@
 import random
 
-
 def Get_user_input():
     userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
     while userInput != 1 and userInput != 2 and userInput != 3:
         userInput = int(input("enter 1-Rock, 2-Paper, 3-Scissors: ")) 
     return userInput
 
-
-#create some varieables
-userName = ""
-while userName == "":
-    userName = input("Enter your name: ")
-
-
-userInput = Get_user_input()
-gameCount = 1
-gameCountMax = 5
-computeWins = 0
-userWins = 0
-while gameCount < gameCountMax:
-
-    if userInput == 1: 
-       userText = "Rock"    
-    elif userInput == 2:
-        userText = "Paper"
+def Get_selection_text(SelectValue):
+    if SelectValue == 1: 
+       ReturnText = "Rock"    
+    elif SelectValue == 2:
+        ReturnText = "Paper"
     else:
-      userText = "Scissors"
-    print (f"User Selection is: {userText}")
+      ReturnText = "Scissors"
+    return ReturnText
 
-    computerInput = random.randint(1,3)
-    if computerInput == 1: 
-     computerText = "Rock"
-    elif computerInput == 2:
-      computerText = "Paper"
-    else:
-      computerText = "Scissors"
-    print (f"Computer Selection is: {computerText}")
-
+def Determine_winner():
     if computerInput == userInput: 
       print ("The result is a Tie!")
 
@@ -65,11 +43,29 @@ while gameCount < gameCountMax:
 #computer = scissors and user has rock, user wins
     if computerInput == 3 and userInput ==1:
      print (f"{userName} Wins!")
+  
+#create some varieables
+userName = ""
+while userName == "":
+    userName = input("Enter your name: ")
 
+
+#userInput = Get_user_input()
+gameCount = 0
+gameCountMax = 5
+computeWins = 0 
+userWins = 0
+while gameCount < gameCountMax:
     gameCount += 1
-
     userInput = Get_user_input()
+    userText = Get_selection_text(userInput)
+    print (f"User Selection is: {userText}")
 
+    computerInput = random.randint(1,3)
+    computerText = Get_selection_text(computerInput)
+    print (f"Computer Selection is: {computerText}")
 
+    Determine_winner()
+    
 
 print (f"We played {gameCountMax}")
